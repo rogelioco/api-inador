@@ -6,7 +6,7 @@ from rest_framework.response import Response
 
 from api.serializers import UsuarioSerializer, RFIDSerializer, TemperaturaSerializer
 from api.models import Usuario, RFID, Temperatura
-
+#-----------------------------------CRUD Usuario----------------------------------
 @api_view(['GET'])
 def apiOverview (request):
     api_urls = {
@@ -52,7 +52,7 @@ def usuarioDelete(request, pk):
 
     return Response('Usuario eliminado :]')
 
-#--------------------------------------------------------------------
+#----------------------------------CRUD RFID----------------------------------
     
 @api_view(['GET'])
 def rfidShow(request):
@@ -89,7 +89,7 @@ def rfidDelete(request, pk):
 
     return Response('Usuario eliminado :]')
 
-#-------------------------------------------------------------------
+#---------------------------------------CRUD Temperatura----------------------------
 
 @api_view(['GET'])
 def tempShow(request):

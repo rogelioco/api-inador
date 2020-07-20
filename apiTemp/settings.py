@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ORIGIN_WHITELIST = ['inador-console.ddns.net']
+CORS_ORIGIN_WHITELIST = ['http://inador-console.ddns.net']
 
 ROOT_URLCONF = 'apiTemp.urls'
 

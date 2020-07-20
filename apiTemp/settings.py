@@ -51,16 +51,32 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
+#CORS
+#CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = [
+    #"http://inador-console.ddns.net/",
+    "http://100.25.154.25",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000"
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+#CORS_ALLOW_CREDENTIALS = True
 
 #CORS_ORIGIN_WHITELIST = ["http://inador-console.ddns.net"]
 
@@ -84,14 +100,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'apiTemp.wsgi.application'
 
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

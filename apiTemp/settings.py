@@ -59,21 +59,21 @@ MIDDLEWARE = [
 ]
 
 #CORS
-#CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 #CORS_ALLOW_CREDENTIALS = True
 
-CORS_ORIGIN_WHITELIST = [
+#CORS_ORIGIN_WHITELIST = [
     #"http://inador-console.ddns.net/",
-    "http://100.25.154.25:4200",
+#    "http://100.25.154.25:4200",
     #"http://localhost:8000",
     #"http://127.0.0.1:80"
-    "http://127.0.0.1:4200",
-    "http://localhost:4200"
-]
+#    "http://127.0.0.1:4200",
+#   "http://localhost:4200"
+#]
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://inador-console.ddns.net/',
-]
+#CSRF_TRUSTED_ORIGINS = [
+#    'http://inador-console.ddns.net/',
+#]
 
 #CORS_ALLOW_CREDENTIALS = True
 
